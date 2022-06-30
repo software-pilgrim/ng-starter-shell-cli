@@ -13,7 +13,6 @@ export default class New extends Command {
   static flags = {
     
   }
-  // from: Flags.string({char: 'f', description: 'Whom is saying hello', required: true}),
 
   static args = [{name: 'projectname', description: 'Name of project to create', required: true}];
 
@@ -35,19 +34,21 @@ export default class New extends Command {
             .then(result => this.npxexec(`npx ng generate @angular/material:navigation nav --defaults --force --interactive false`, this.projectFolder))
             .then(result => this.npxexec(`npx ng generate @angular/material:dashboard dashboard --defaults --force --interactive false`, this.projectFolder))
             .then(result => this.npxexec(`npm install oidc-client --save`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate service core/auth`, this.projectFolder));
+            .then(result => this.npxexec(`npx ng generate service core/auth`, this.projectFolder))
+            .then(result => this.npxexec(`npm install @softwarepilgrim/ng-starter-shell`, this.projectFolder))
+            .then(result => this.npxexec(`npx ng generate @softwarepilgrim/ng-starter-shell:starter-shell`, this.projectFolder));
   }
 
   async npxexec(commandline: string, folder: string): Promise<void> { 
     return new Promise((resolve, reject) => {
-        this.log(`npxexec ${commandline}`);
+        this.log(`${commandline}`);
         let check = exec(`${commandline}`, { 'cwd': folder });
         check.on('exit', (exitcode) => {
             if(exitcode === 0) {
-                this.log(`Successful npxexec ${commandline}`);
+                this.log(`Successful - ${commandline}`);
                 resolve();
             } else {
-                this.log(`Error doing npxexec ${commandline}`);
+                this.log(`Error doing - ${commandline}`);
                 reject(exitcode);
             }
         });

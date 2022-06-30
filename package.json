@@ -1,6 +1,6 @@
 {
   "name": "starter-shell-ng-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CLI for creating best practise Angular scaffolding",
   "author": "Graham @grahammcallister",
   "bin": {
@@ -57,7 +57,7 @@
     }
   },
   "scripts": {
-    "build": "shx rm -rf dist && tsc -p tsconfig.json && tsc -p tsconfig.schematics.json",
+    "build": "shx rm -rf dist && tsc -p tsconfig.json",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
