@@ -1,15 +1,15 @@
 {
-  "name": "starter-shell-ng-cli",
+  "name": "@softwarepilgrim/ng-starter-shell-cli",
   "version": "0.0.1",
   "description": "CLI for creating best practise Angular scaffolding",
   "author": "Graham @grahammcallister",
   "bin": {
     "starter-shell-ng-cli": "./bin/run"
   },
-  "homepage": "https://github.com/grahammcallister/starter-shell-ng",
+  "homepage": "https://github.com/software-pilgrim/ng-starter-shell-cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "grahammcallister/starter-shell-ng",
+  "repository": "software-pilgrim/starter-shell-ng",
   "files": [
     "/bin",
     "/dist",
@@ -42,8 +42,8 @@
     "typescript": "^4.4.3"
   },
   "oclif": {
-    "bin": "starter-shell-ng-cli",
-    "dirname": "starter-shell-ng-cli",
+    "bin": "ng-starter-shell-cli",
+    "dirname": "ng-starter-shell-cli",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -51,8 +51,8 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "new": {
+        "description": "Creates a new Angular workspace with installed components and schematic for Software Pilgrim starter shell"
       }
     }
   },
@@ -68,7 +68,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/grahammcallister/starter-shell-ng/issues",
+  "bugs": "https://github.com/software-pilgrim/ng-starter-shell-cli/issues",
   "keywords": [
     "oclif"
   ],
