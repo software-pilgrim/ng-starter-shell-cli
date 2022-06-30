@@ -4,12 +4,12 @@
   "description": "CLI for creating best practise Angular scaffolding",
   "author": "Graham @grahammcallister",
   "bin": {
-    "starter-shell-ng-cli": "./bin/run"
+    "ng-starter-shell-cli": "./bin/run"
   },
   "homepage": "https://github.com/software-pilgrim/ng-starter-shell-cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "software-pilgrim/starter-shell-ng",
+  "repository": "software-pilgrim/ng-starter-shell-cli",
   "files": [
     "/bin",
     "/dist",
