@@ -35,7 +35,7 @@ export default class New extends Command {
             .then(result => this.npxexec(`npx ng generate @angular/material:dashboard dashboard --defaults --force --interactive false`, this.projectFolder))
             .then(result => this.npxexec(`npm install oidc-client --save`, this.projectFolder))
             .then(result => this.npxexec(`npx ng generate service core/auth`, this.projectFolder))
-            .then(result => this.npxexec(`npm install @softwarepilgrim/ng-starter-shell`, this.projectFolder))
+            .then(result => this.npxexec(`npm install @softwarepilgrim/ng-starter-shell --save-dev`, this.projectFolder))
             .then(result => this.npxexec(`npx ng generate @softwarepilgrim/ng-starter-shell:starter-shell`, this.projectFolder));
   }
 
