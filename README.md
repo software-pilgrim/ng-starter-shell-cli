@@ -24,3 +24,15 @@ npx @softwarepilgrim\ng-starter-shell-cli new [projectname]
 
 Built using
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+
+## Ideas
+- Creating this as an npm package might be helpful someday, see https://docs.npmjs.com/cli/v8/using-npm/developers
+- Building a CLI in JS with OClif, see https://dev.to/fedekau/building-awesome-clis-with-javascript-and-oclif-291o
+- Securing Angular with OpenID Connect and OAuth2: https://app.pluralsight.com/library/courses/openid-and-oauth2-securing-angular-apps
+- Using schematics seems wise https://www.digitalocean.com/community/tutorials/angular-angular-cli-schematics
+- Authoring my own is going to surely be needed https://angular.io/guide/schematics 
+- https://angular.io/guide/schematics-authoring
+- https://blog.angular.io/schematics-an-introduction-dc1dfbc2a2b2
+
+## TODO
+- Package CLI for npm
