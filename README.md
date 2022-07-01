@@ -33,6 +33,8 @@ Built using
 - Authoring my own is going to surely be needed https://angular.io/guide/schematics 
 - https://angular.io/guide/schematics-authoring
 - https://blog.angular.io/schematics-an-introduction-dc1dfbc2a2b2
+- Learning from the .Net Prism project about modular app design https://prismlibrary.com/docs/modules.html
+- Also the idea of a catalog for modules that decides what modules to load - https://prismlibrary.com/docs/modules.html#module-catalog
 
 ## TODO
 - Package CLI for npm
