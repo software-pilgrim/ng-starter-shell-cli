@@ -1,6 +1,6 @@
 {
   "name": "@softwarepilgrim/ng-starter-shell-cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "CLI with schematics for creating an Angular application shell",
   "author": "Graham @grahammcallister",
   "bin": {

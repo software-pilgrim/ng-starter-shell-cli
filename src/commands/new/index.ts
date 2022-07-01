@@ -16,27 +16,29 @@ export default class New extends Command {
 
   static args = [{name: 'projectname', description: 'Name of project to create', required: true}];
 
-  projectFolder: string = './';
-  coreModuleFolder: string = 'src/app/core/';
+  workspaceFolder: string = './';
 
   async run(): Promise<void> {
     const {args, flags} = await this.parse(New);
 
     this.log(`new ${args.projectname} (./src/commands/new/index.ts)`);
 
-    this.projectFolder = `./${args.projectname}/`;
-    this.coreModuleFolder = this.projectFolder + this.coreModuleFolder;
+    this.workspaceFolder = `./${args.projectname}/`;
 
     return this.
-        npxexec(`npx ng new ${args.projectname} --defaults --style scss --routing true`, '.')
-            .then(result => this.npxexec(`npx ng add @angular/material --defaults --skip-confirmation --force --interactive false`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate module core`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate @angular/material:navigation nav --defaults --force --interactive false`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate @angular/material:dashboard dashboard --defaults --force --interactive false`, this.projectFolder))
-            .then(result => this.npxexec(`npm install oidc-client --save`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate service core/auth`, this.projectFolder))
-            .then(result => this.npxexec(`npm install @softwarepilgrim/ng-starter-shell --save-dev`, this.projectFolder))
-            .then(result => this.npxexec(`npx ng generate @softwarepilgrim/ng-starter-shell:starter-shell`, this.projectFolder));
+        npxexec(`npx ng new ${args.projectname} --create-application false`, '.')
+            .then(result => this.npxexec(`npx ng generate application ${args.projectname} --defaults --style scss --routing true`, this.workspaceFolder))
+            .then(result => this.npxexec(`npm install @softwarepilgrim/ng-starter-shell --save-dev`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate @softwarepilgrim/ng-starter-shell:starter-shell`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng add @angular/material --defaults --skip-confirmation --force --interactive false`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate module core`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate @angular/material:navigation nav --defaults --force --interactive false`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate @angular/material:dashboard dashboard --defaults --force --interactive false`, this.workspaceFolder))
+            .then(result => this.npxexec(`npm install oidc-client --save`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate service core/auth`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate module shell`, this.workspaceFolder))
+            .then(result => this.npxexec(`npx ng generate component shell`, this.workspaceFolder));
+
   }
 
   async npxexec(commandline: string, folder: string): Promise<void> { 
