@@ -1,7 +1,7 @@
 {
   "name": "@softwarepilgrim/ng-starter-shell-cli",
   "version": "0.0.1",
-  "description": "CLI for creating best practise Angular scaffolding",
+  "description": "CLI with schematics for creating an Angular application shell",
   "author": "Graham @grahammcallister",
   "bin": {
     "ng-starter-shell-cli": "./bin/run"
@@ -57,7 +57,7 @@
     }
   },
   "scripts": {
-    "build": "shx rm -rf dist && tsc -p tsconfig.json",
+    "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
@@ -72,9 +72,5 @@
   "keywords": [
     "oclif"
   ],
-  "types": "dist/index.d.ts",
-  "schematics": "./schematics/collection.js",
-  "ng-add": {
-    "save": "devDependencies"
-  }
+  "types": "dist/index.d.ts"
 }
