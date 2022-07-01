@@ -36,6 +36,11 @@ Built using
 - Learning from the .Net Prism project about modular app design https://prismlibrary.com/docs/modules.html
 - Also the idea of a catalog for modules that decides what modules to load - https://prismlibrary.com/docs/modules.html#module-catalog
 - Considering what to make a library vs within the main app - https://angular.io/guide/creating-libraries
+- Will need to experiment with library packaging - https://github.com/ng-packagr/ng-packagr/blob/main/README.md
 
 ## TODO
-- Package CLI for npm
+- Identify and implement Prism concepts like module catalog
+- Identify and implement regions like top, bottom, status bar, left, right, middle, overlay/dialog, toast/notification/native
+- Consider the role of IFrame vs WebView vs a component e.g. a WebView component vs a region
+- Identify and implement containers like tabbed container for modules/components
+- Package as a separate library or as part of schematics
