@@ -29,6 +29,8 @@ Built using
 - ~~Creating this as an npm package might be helpful someday, see https://docs.npmjs.com/cli/v8/using-npm/developers~~
 - ~~Building a CLI in JS with OClif, see https://dev.to/fedekau/building-awesome-clis-with-javascript-and-oclif-291o~~
 - Securing Angular with OpenID Connect and OAuth2: https://app.pluralsight.com/library/courses/openid-and-oauth2-securing-angular-apps
+- https://plugins.miniorange.com/twitter-single-sign-on-wordpress-sso-oauth-openid-connect
+- https://developer.twitter.com/en/docs/authentication/oauth-2-0/authorization-code
 - ~~Using schematics seems wise https://www.digitalocean.com/community/tutorials/angular-angular-cli-schematics~~
 - ~~Authoring my own is going to surely be needed https://angular.io/guide/schematics~~ 
 - ~~https://angular.io/guide/schematics-authoring~~
